@@ -7,12 +7,20 @@
 //
 
 #import "SALAppDelegate.h"
+#import "SALMainViewController.h"
+
+@interface SALAppDelegate ()
+
+@property (nonatomic, strong) SALMainViewController *mainViewController;
+
+@end
 
 @implementation SALAppDelegate
 
-- (void)applicationDidFinishLaunching:(NSNotification *)aNotification
-{
-    // Insert code here to initialize your application
+- (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
+    self.mainViewController = [[SALMainViewController alloc] initWithNibName:@"SALMainViewController" bundle:nil];
+    
+    [self.window.contentView addSubview:self.mainViewController.view];
 }
 
 @end

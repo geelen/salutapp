@@ -18,6 +18,9 @@
 		F119B2A1184015F700C4F139 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F119B280184015F700C4F139 /* Cocoa.framework */; };
 		F119B2A9184015F700C4F139 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F119B2A7184015F700C4F139 /* InfoPlist.strings */; };
 		F119B2AB184015F700C4F139 /* SalutTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F119B2AA184015F700C4F139 /* SalutTests.m */; };
+		F119B2B718401F6900C4F139 /* SALMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F119B2B518401F6900C4F139 /* SALMainViewController.m */; };
+		F119B2B818401F6900C4F139 /* SALMainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F119B2B618401F6900C4F139 /* SALMainViewController.xib */; };
+		F119B2BA1840213F00C4F139 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F119B2B91840213F00C4F139 /* WebKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +53,10 @@
 		F119B2A6184015F700C4F139 /* SalutTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SalutTests-Info.plist"; sourceTree = "<group>"; };
 		F119B2A8184015F700C4F139 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		F119B2AA184015F700C4F139 /* SalutTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SalutTests.m; sourceTree = "<group>"; };
+		F119B2B418401F6900C4F139 /* SALMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SALMainViewController.h; sourceTree = "<group>"; };
+		F119B2B518401F6900C4F139 /* SALMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SALMainViewController.m; sourceTree = "<group>"; };
+		F119B2B618401F6900C4F139 /* SALMainViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SALMainViewController.xib; sourceTree = "<group>"; };
+		F119B2B91840213F00C4F139 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +64,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F119B2BA1840213F00C4F139 /* WebKit.framework in Frameworks */,
 				F119B281184015F700C4F139 /* Cocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -95,6 +103,7 @@
 		F119B27F184015F700C4F139 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F119B2B91840213F00C4F139 /* WebKit.framework */,
 				F119B280184015F700C4F139 /* Cocoa.framework */,
 				F119B29F184015F700C4F139 /* XCTest.framework */,
 				F119B282184015F700C4F139 /* Other Frameworks */,
@@ -120,6 +129,9 @@
 				F119B295184015F700C4F139 /* MainMenu.xib */,
 				F119B298184015F700C4F139 /* Images.xcassets */,
 				F119B287184015F700C4F139 /* Supporting Files */,
+				F119B2B418401F6900C4F139 /* SALMainViewController.h */,
+				F119B2B518401F6900C4F139 /* SALMainViewController.m */,
+				F119B2B618401F6900C4F139 /* SALMainViewController.xib */,
 			);
 			path = Salut;
 			sourceTree = "<group>";
@@ -231,6 +243,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F119B2B818401F6900C4F139 /* SALMainViewController.xib in Resources */,
 				F119B28B184015F700C4F139 /* InfoPlist.strings in Resources */,
 				F119B299184015F700C4F139 /* Images.xcassets in Resources */,
 				F119B291184015F700C4F139 /* Credits.rtf in Resources */,
@@ -255,6 +268,7 @@
 			files = (
 				F119B28D184015F700C4F139 /* main.m in Sources */,
 				F119B294184015F700C4F139 /* SALAppDelegate.m in Sources */,
+				F119B2B718401F6900C4F139 /* SALMainViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
