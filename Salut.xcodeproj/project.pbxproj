@@ -14,15 +14,18 @@
 		F119B294184015F700C4F139 /* SALAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F119B293184015F700C4F139 /* SALAppDelegate.m */; };
 		F119B297184015F700C4F139 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = F119B295184015F700C4F139 /* MainMenu.xib */; };
 		F119B299184015F700C4F139 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F119B298184015F700C4F139 /* Images.xcassets */; };
-		F119B2A0184015F700C4F139 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F119B29F184015F700C4F139 /* XCTest.framework */; };
 		F119B2A1184015F700C4F139 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F119B280184015F700C4F139 /* Cocoa.framework */; };
 		F119B2A9184015F700C4F139 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F119B2A7184015F700C4F139 /* InfoPlist.strings */; };
-		F119B2AB184015F700C4F139 /* SalutTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F119B2AA184015F700C4F139 /* SalutTests.m */; };
 		F119B2B718401F6900C4F139 /* SALMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F119B2B518401F6900C4F139 /* SALMainViewController.m */; };
 		F119B2B818401F6900C4F139 /* SALMainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F119B2B618401F6900C4F139 /* SALMainViewController.xib */; };
 		F119B2BA1840213F00C4F139 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F119B2B91840213F00C4F139 /* WebKit.framework */; };
 		F119B2D5184025FA00C4F139 /* ReactiveCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F119B2C8184025EA00C4F139 /* ReactiveCocoa.framework */; };
 		F119B2D71840360800C4F139 /* index.html in Resources */ = {isa = PBXBuildFile; fileRef = F119B2D61840360800C4F139 /* index.html */; };
+		F119B2DC1840A2AD00C4F139 /* SALRoomModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F119B2DB1840A2AD00C4F139 /* SALRoomModel.m */; };
+		F119B2DE1840A38800C4F139 /* SALRoomModelSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = F119B2DD1840A38800C4F139 /* SALRoomModelSpec.m */; };
+		F119B3041840A55E00C4F139 /* libExpecta.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F119B2FB1840A51000C4F139 /* libExpecta.a */; };
+		F119B3051840A56D00C4F139 /* libSpecta-OSX.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F119B2ED1840A50A00C4F139 /* libSpecta-OSX.a */; };
+		F119B3071840A73600C4F139 /* IOBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F119B3061840A73600C4F139 /* IOBluetooth.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -82,13 +85,75 @@
 			remoteGlobalIDString = D05AD39417F2D56F0080895B;
 			remoteInfo = "ReactiveCocoa-Mac";
 		};
+		F119B2EA1840A50A00C4F139 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F119B2E31840A50A00C4F139 /* Specta.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = E9901BFD18205A3500844A05;
+			remoteInfo = "Specta-iOS";
+		};
+		F119B2EC1840A50A00C4F139 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F119B2E31840A50A00C4F139 /* Specta.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = E9901C2A18205AB100844A05;
+			remoteInfo = "Specta-OSX";
+		};
+		F119B2EE1840A50A00C4F139 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F119B2E31840A50A00C4F139 /* Specta.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = E9901C0D18205A3500844A05;
+			remoteInfo = "SpectaTests-iOS";
+		};
+		F119B2F01840A50A00C4F139 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F119B2E31840A50A00C4F139 /* Specta.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = E9901C3B18205AB100844A05;
+			remoteInfo = "Specta-OSXTests";
+		};
+		F119B2FA1840A51000C4F139 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F119B2F21840A51000C4F139 /* Expecta.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = E9ACDF0C13B2DD520010F4D7;
+			remoteInfo = Expecta;
+		};
+		F119B2FC1840A51000C4F139 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F119B2F21840A51000C4F139 /* Expecta.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = E93067CE13B2E6D100EA26FF;
+			remoteInfo = "Expecta-iOS";
+		};
+		F119B2FE1840A51000C4F139 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F119B2F21840A51000C4F139 /* Expecta.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = E9ACDF1D13B2DD520010F4D7;
+			remoteInfo = ExpectaTests;
+		};
+		F119B3001840A51000C4F139 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F119B2F21840A51000C4F139 /* Expecta.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = E93067DA13B2E6D100EA26FF;
+			remoteInfo = "Expecta-iOSTests";
+		};
+		F119B3021840A51000C4F139 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F119B2F21840A51000C4F139 /* Expecta.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 9C4416F917FF3F4A00978F09;
+			remoteInfo = "ExpectaTests-XCTest";
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		F119B27D184015F700C4F139 /* Salut.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Salut.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F119B280184015F700C4F139 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		F119B283184015F700C4F139 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
-		F119B284184015F700C4F139 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		F119B285184015F700C4F139 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		F119B288184015F700C4F139 /* Salut-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Salut-Info.plist"; sourceTree = "<group>"; };
 		F119B28A184015F700C4F139 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -100,16 +165,21 @@
 		F119B296184015F700C4F139 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		F119B298184015F700C4F139 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		F119B29E184015F700C4F139 /* SalutTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SalutTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		F119B29F184015F700C4F139 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		F119B2A6184015F700C4F139 /* SalutTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SalutTests-Info.plist"; sourceTree = "<group>"; };
 		F119B2A8184015F700C4F139 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		F119B2AA184015F700C4F139 /* SalutTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SalutTests.m; sourceTree = "<group>"; };
 		F119B2B418401F6900C4F139 /* SALMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SALMainViewController.h; sourceTree = "<group>"; };
 		F119B2B518401F6900C4F139 /* SALMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SALMainViewController.m; sourceTree = "<group>"; };
 		F119B2B618401F6900C4F139 /* SALMainViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SALMainViewController.xib; sourceTree = "<group>"; };
 		F119B2B91840213F00C4F139 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		F119B2BB184025EA00C4F139 /* ReactiveCocoa.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ReactiveCocoa.xcodeproj; path = External/ReactiveCocoa/ReactiveCocoaFramework/ReactiveCocoa.xcodeproj; sourceTree = "<group>"; };
 		F119B2D61840360800C4F139 /* index.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = index.html; sourceTree = SOURCE_ROOT; };
+		F119B2DA1840A2AD00C4F139 /* SALRoomModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SALRoomModel.h; sourceTree = "<group>"; };
+		F119B2DB1840A2AD00C4F139 /* SALRoomModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SALRoomModel.m; sourceTree = "<group>"; };
+		F119B2DD1840A38800C4F139 /* SALRoomModelSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SALRoomModelSpec.m; sourceTree = "<group>"; };
+		F119B2E31840A50A00C4F139 /* Specta.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Specta.xcodeproj; path = External/specta/Specta.xcodeproj; sourceTree = "<group>"; };
+		F119B2F21840A51000C4F139 /* Expecta.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Expecta.xcodeproj; path = External/expecta/Expecta.xcodeproj; sourceTree = "<group>"; };
+		F119B3061840A73600C4F139 /* IOBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOBluetooth.framework; path = System/Library/Frameworks/IOBluetooth.framework; sourceTree = SDKROOT; };
+		F119B3081840A87900C4F139 /* SalutTests-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SalutTests-Prefix.pch"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +187,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F119B3071840A73600C4F139 /* IOBluetooth.framework in Frameworks */,
 				F119B2D5184025FA00C4F139 /* ReactiveCocoa.framework in Frameworks */,
 				F119B2BA1840213F00C4F139 /* WebKit.framework in Frameworks */,
 				F119B281184015F700C4F139 /* Cocoa.framework in Frameworks */,
@@ -128,7 +199,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				F119B2A1184015F700C4F139 /* Cocoa.framework in Frameworks */,
-				F119B2A0184015F700C4F139 /* XCTest.framework in Frameworks */,
+				F119B3041840A55E00C4F139 /* libExpecta.a in Frameworks */,
+				F119B3051840A56D00C4F139 /* libSpecta-OSX.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -157,23 +229,24 @@
 		F119B27F184015F700C4F139 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F119B2F21840A51000C4F139 /* Expecta.xcodeproj */,
+				F119B2E31840A50A00C4F139 /* Specta.xcodeproj */,
 				F119B2BB184025EA00C4F139 /* ReactiveCocoa.xcodeproj */,
-				F119B2B91840213F00C4F139 /* WebKit.framework */,
-				F119B280184015F700C4F139 /* Cocoa.framework */,
-				F119B29F184015F700C4F139 /* XCTest.framework */,
-				F119B282184015F700C4F139 /* Other Frameworks */,
+				F119B282184015F700C4F139 /* System Frameworks */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		F119B282184015F700C4F139 /* Other Frameworks */ = {
+		F119B282184015F700C4F139 /* System Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F119B3061840A73600C4F139 /* IOBluetooth.framework */,
+				F119B280184015F700C4F139 /* Cocoa.framework */,
+				F119B2B91840213F00C4F139 /* WebKit.framework */,
 				F119B283184015F700C4F139 /* AppKit.framework */,
-				F119B284184015F700C4F139 /* CoreData.framework */,
 				F119B285184015F700C4F139 /* Foundation.framework */,
 			);
-			name = "Other Frameworks";
+			name = "System Frameworks";
 			sourceTree = "<group>";
 		};
 		F119B286184015F700C4F139 /* Salut */ = {
@@ -187,6 +260,8 @@
 				F119B2B418401F6900C4F139 /* SALMainViewController.h */,
 				F119B2B518401F6900C4F139 /* SALMainViewController.m */,
 				F119B2B618401F6900C4F139 /* SALMainViewController.xib */,
+				F119B2DA1840A2AD00C4F139 /* SALRoomModel.h */,
+				F119B2DB1840A2AD00C4F139 /* SALRoomModel.m */,
 			);
 			path = Salut;
 			sourceTree = "<group>";
@@ -207,8 +282,8 @@
 		F119B2A4184015F700C4F139 /* SalutTests */ = {
 			isa = PBXGroup;
 			children = (
-				F119B2AA184015F700C4F139 /* SalutTests.m */,
 				F119B2A5184015F700C4F139 /* Supporting Files */,
+				F119B2DD1840A38800C4F139 /* SALRoomModelSpec.m */,
 			);
 			path = SalutTests;
 			sourceTree = "<group>";
@@ -218,6 +293,7 @@
 			children = (
 				F119B2A6184015F700C4F139 /* SalutTests-Info.plist */,
 				F119B2A7184015F700C4F139 /* InfoPlist.strings */,
+				F119B3081840A87900C4F139 /* SalutTests-Prefix.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -232,6 +308,29 @@
 				F119B2D0184025EA00C4F139 /* ReactiveCocoa-iOS-UIKitTestHost.app */,
 				F119B2D2184025EA00C4F139 /* ReactiveCocoa-iOS-UIKitTestHostTests.octest */,
 				F119B2D4184025EA00C4F139 /* libReactiveCocoa-Mac.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F119B2E41840A50A00C4F139 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F119B2EB1840A50A00C4F139 /* libSpecta-iOS.a */,
+				F119B2ED1840A50A00C4F139 /* libSpecta-OSX.a */,
+				F119B2EF1840A50A00C4F139 /* SpectaTests-iOS.xctest */,
+				F119B2F11840A50A00C4F139 /* Specta-OSXTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F119B2F31840A51000C4F139 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F119B2FB1840A51000C4F139 /* libExpecta.a */,
+				F119B2FD1840A51000C4F139 /* libExpecta-iOS.a */,
+				F119B2FF1840A51000C4F139 /* ExpectaTests.octest */,
+				F119B3011840A51000C4F139 /* Expecta-iOSTests.octest */,
+				F119B3031840A51000C4F139 /* ExpectaTests-XCTest.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -302,8 +401,16 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
+					ProductGroup = F119B2F31840A51000C4F139 /* Products */;
+					ProjectRef = F119B2F21840A51000C4F139 /* Expecta.xcodeproj */;
+				},
+				{
 					ProductGroup = F119B2BC184025EA00C4F139 /* Products */;
 					ProjectRef = F119B2BB184025EA00C4F139 /* ReactiveCocoa.xcodeproj */;
+				},
+				{
+					ProductGroup = F119B2E41840A50A00C4F139 /* Products */;
+					ProjectRef = F119B2E31840A50A00C4F139 /* Specta.xcodeproj */;
 				},
 			);
 			projectRoot = "";
@@ -364,6 +471,69 @@
 			remoteRef = F119B2D3184025EA00C4F139 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
+		F119B2EB1840A50A00C4F139 /* libSpecta-iOS.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = "libSpecta-iOS.a";
+			remoteRef = F119B2EA1840A50A00C4F139 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		F119B2ED1840A50A00C4F139 /* libSpecta-OSX.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = "libSpecta-OSX.a";
+			remoteRef = F119B2EC1840A50A00C4F139 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		F119B2EF1840A50A00C4F139 /* SpectaTests-iOS.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "SpectaTests-iOS.xctest";
+			remoteRef = F119B2EE1840A50A00C4F139 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		F119B2F11840A50A00C4F139 /* Specta-OSXTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "Specta-OSXTests.xctest";
+			remoteRef = F119B2F01840A50A00C4F139 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		F119B2FB1840A51000C4F139 /* libExpecta.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libExpecta.a;
+			remoteRef = F119B2FA1840A51000C4F139 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		F119B2FD1840A51000C4F139 /* libExpecta-iOS.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = "libExpecta-iOS.a";
+			remoteRef = F119B2FC1840A51000C4F139 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		F119B2FF1840A51000C4F139 /* ExpectaTests.octest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = ExpectaTests.octest;
+			remoteRef = F119B2FE1840A51000C4F139 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		F119B3011840A51000C4F139 /* Expecta-iOSTests.octest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "Expecta-iOSTests.octest";
+			remoteRef = F119B3001840A51000C4F139 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		F119B3031840A51000C4F139 /* ExpectaTests-XCTest.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "ExpectaTests-XCTest.xctest";
+			remoteRef = F119B3021840A51000C4F139 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
 /* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
@@ -398,6 +568,7 @@
 				F119B28D184015F700C4F139 /* main.m in Sources */,
 				F119B294184015F700C4F139 /* SALAppDelegate.m in Sources */,
 				F119B2B718401F6900C4F139 /* SALMainViewController.m in Sources */,
+				F119B2DC1840A2AD00C4F139 /* SALRoomModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -405,7 +576,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F119B2AB184015F700C4F139 /* SalutTests.m in Sources */,
+				F119B2DE1840A38800C4F139 /* SALRoomModelSpec.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -559,12 +730,22 @@
 					"$(inherited)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Salut/Salut-Prefix.pch";
+				GCC_PREFIX_HEADER = "SalutTests/SalutTests-Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
 				);
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"./External/expecta/src/**",
+					"./External/specta/src/**",
+				);
 				INFOPLIST_FILE = "SalutTests/SalutTests-Info.plist";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
@@ -581,8 +762,18 @@
 					"$(inherited)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Salut/Salut-Prefix.pch";
+				GCC_PREFIX_HEADER = "SalutTests/SalutTests-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"./External/expecta/src/**",
+					"./External/specta/src/**",
+				);
 				INFOPLIST_FILE = "SalutTests/SalutTests-Info.plist";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;

@@ -1,0 +1,13 @@
+//
+//  SalutTests.pch
+//  Salut
+//
+//  Created by Glen Maddern on 23/11/2013.
+//  Copyright (c) 2013 Glen Maddern. All rights reserved.
+//
+
+#import <Foundation/Foundation.h>
+
+#define EXP_SHORTHAND
+#import "Specta.h"
+#import "Expecta.h"
