@@ -22,6 +22,8 @@
 - (void)loadView {
     [super loadView];
     
+    [self.contentWebView.mainFrame loadHTMLString:[NSString stringWithContentsOfURL:[[NSBundle mainBundle] URLForResource:@"index" withExtension:@"html"] encoding:NSUTF8StringEncoding error:NULL] baseURL:nil];
+    
     [self.messageTextField.rac_textSignal subscribeNext:^(NSString *newName) {
         NSLog(@"%@", newName);
     }];

@@ -22,6 +22,7 @@
 		F119B2B818401F6900C4F139 /* SALMainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F119B2B618401F6900C4F139 /* SALMainViewController.xib */; };
 		F119B2BA1840213F00C4F139 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F119B2B91840213F00C4F139 /* WebKit.framework */; };
 		F119B2D5184025FA00C4F139 /* ReactiveCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F119B2C8184025EA00C4F139 /* ReactiveCocoa.framework */; };
+		F119B2D71840360800C4F139 /* index.html in Resources */ = {isa = PBXBuildFile; fileRef = F119B2D61840360800C4F139 /* index.html */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -108,6 +109,7 @@
 		F119B2B618401F6900C4F139 /* SALMainViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SALMainViewController.xib; sourceTree = "<group>"; };
 		F119B2B91840213F00C4F139 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		F119B2BB184025EA00C4F139 /* ReactiveCocoa.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ReactiveCocoa.xcodeproj; path = External/ReactiveCocoa/ReactiveCocoaFramework/ReactiveCocoa.xcodeproj; sourceTree = "<group>"; };
+		F119B2D61840360800C4F139 /* index.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = index.html; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -192,6 +194,7 @@
 		F119B287184015F700C4F139 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				F119B2D61840360800C4F139 /* index.html */,
 				F119B288184015F700C4F139 /* Salut-Info.plist */,
 				F119B289184015F700C4F139 /* InfoPlist.strings */,
 				F119B28C184015F700C4F139 /* main.m */,
@@ -371,6 +374,7 @@
 				F119B2B818401F6900C4F139 /* SALMainViewController.xib in Resources */,
 				F119B28B184015F700C4F139 /* InfoPlist.strings in Resources */,
 				F119B299184015F700C4F139 /* Images.xcassets in Resources */,
+				F119B2D71840360800C4F139 /* index.html in Resources */,
 				F119B291184015F700C4F139 /* Credits.rtf in Resources */,
 				F119B297184015F700C4F139 /* MainMenu.xib in Resources */,
 			);

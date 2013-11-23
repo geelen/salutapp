@@ -18,8 +18,11 @@
 @implementation SALAppDelegate
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
+    [[NSUserDefaults standardUserDefaults] registerDefaults:@{@"WebKitDeveloperExtras": @YES}];
+    
     self.mainViewController = [[SALMainViewController alloc] initWithNibName:@"SALMainViewController" bundle:nil];
     
+    self.mainViewController.view.frame = [self.window.contentView bounds];
     [self.window.contentView addSubview:self.mainViewController.view];
 }
 
