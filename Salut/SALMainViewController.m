@@ -22,15 +22,16 @@
 - (void)loadView {
     [super loadView];
     
-    [self.contentWebView.mainFrame loadHTMLString:[NSString stringWithContentsOfURL:[[NSBundle mainBundle] URLForResource:@"index" withExtension:@"html"] encoding:NSUTF8StringEncoding error:NULL] baseURL:nil];
+    self.contentWebView.frameLoadDelegate = self;
+    self.messageTextField.delegate = self;
     
-    [self.messageTextField.rac_textSignal subscribeNext:^(NSString *newName) {
-        NSLog(@"%@", newName);
-    }];
+    [self.contentWebView.mainFrame loadHTMLString:[NSString stringWithContentsOfURL:[[NSBundle mainBundle] URLForResource:@"index" withExtension:@"html"] encoding:NSUTF8StringEncoding error:NULL] baseURL:nil];
+
 }
 
-- (void)controlTextDidChange:(NSNotification *)notification {
-    NSLog(@"Control text %@", self.messageTextField.stringValue);
+- (void)controlTextDidEndEditing:(NSNotification *)notification {
+    [self.contentWebView.windowScriptObject callWebScriptMethod:@"chatHappened" withArguments:@[ @"Alan", self.messageTextField.stringValue ]];
+    self.messageTextField.stringValue = @"";
 }
 
 

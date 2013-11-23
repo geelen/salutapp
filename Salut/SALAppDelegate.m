@@ -18,7 +18,7 @@
 @implementation SALAppDelegate
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
-    [[NSUserDefaults standardUserDefaults] registerDefaults:@{@"WebKitDeveloperExtras": @YES}];
+    [[NSUserDefaults standardUserDefaults] registerDefaults:@{ @"WebKitDeveloperExtras": @YES }];
     
     self.mainViewController = [[SALMainViewController alloc] initWithNibName:@"SALMainViewController" bundle:nil];
     
