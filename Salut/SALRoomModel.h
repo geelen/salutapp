@@ -10,4 +10,8 @@
 
 @interface SALRoomModel : NSObject
 
+@property (nonatomic, strong) NSArray *members;
+
+- (void)addMember:(NSString *) member;
+
 @end

@@ -25,7 +25,6 @@
 		F119B2DE1840A38800C4F139 /* SALRoomModelSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = F119B2DD1840A38800C4F139 /* SALRoomModelSpec.m */; };
 		F119B3041840A55E00C4F139 /* libExpecta.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F119B2FB1840A51000C4F139 /* libExpecta.a */; };
 		F119B3051840A56D00C4F139 /* libSpecta-OSX.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F119B2ED1840A50A00C4F139 /* libSpecta-OSX.a */; };
-		F119B3071840A73600C4F139 /* IOBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F119B3061840A73600C4F139 /* IOBluetooth.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -178,7 +177,6 @@
 		F119B2DD1840A38800C4F139 /* SALRoomModelSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SALRoomModelSpec.m; sourceTree = "<group>"; };
 		F119B2E31840A50A00C4F139 /* Specta.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Specta.xcodeproj; path = External/specta/Specta.xcodeproj; sourceTree = "<group>"; };
 		F119B2F21840A51000C4F139 /* Expecta.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Expecta.xcodeproj; path = External/expecta/Expecta.xcodeproj; sourceTree = "<group>"; };
-		F119B3061840A73600C4F139 /* IOBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOBluetooth.framework; path = System/Library/Frameworks/IOBluetooth.framework; sourceTree = SDKROOT; };
 		F119B3081840A87900C4F139 /* SalutTests-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SalutTests-Prefix.pch"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -187,7 +185,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F119B3071840A73600C4F139 /* IOBluetooth.framework in Frameworks */,
 				F119B2D5184025FA00C4F139 /* ReactiveCocoa.framework in Frameworks */,
 				F119B2BA1840213F00C4F139 /* WebKit.framework in Frameworks */,
 				F119B281184015F700C4F139 /* Cocoa.framework in Frameworks */,
@@ -240,7 +237,6 @@
 		F119B282184015F700C4F139 /* System Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				F119B3061840A73600C4F139 /* IOBluetooth.framework */,
 				F119B280184015F700C4F139 /* Cocoa.framework */,
 				F119B2B91840213F00C4F139 /* WebKit.framework */,
 				F119B283184015F700C4F139 /* AppKit.framework */,

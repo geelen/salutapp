@@ -11,12 +11,29 @@
 SpecBegin(SALRoomModel)
 
 describe(@"when initialised", ^{
+    __block SALRoomModel *model;
+    
+    beforeEach(^{
+        model = [[SALRoomModel alloc] init];
+        expect(model).toNot.beNil();
+    });
    
     it(@"should do a 💩", ^{
-        SALRoomModel *model = [[SALRoomModel alloc] init];
-        expect(model).toNot.beNil();
+        expect(model.members).to.equal(@[@"LOL"]);
+    });
+    
+    it(@"should add members", ^{
+        [model addMember:@"LOLWAT"];
+        
+        expect(model.members).to.equal(@[@"LOL", @"LOLWAT"]);
     });
     
 });
+
+/* 
+ 
+ 
+ 
+ */
 
 SpecEnd
