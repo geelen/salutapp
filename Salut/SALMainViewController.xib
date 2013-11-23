@@ -8,6 +8,7 @@
     <objects>
         <customObject id="-2" userLabel="File's Owner" customClass="SALMainViewController">
             <connections>
+                <outlet property="messageTextField" destination="XXw-xP-QKG" id="QME-iF-9vo"/>
                 <outlet property="view" destination="1" id="2"/>
             </connections>
         </customObject>

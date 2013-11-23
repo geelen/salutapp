@@ -8,19 +8,24 @@
 
 #import "SALMainViewController.h"
 
-@interface SALMainViewController ()
+@interface SALMainViewController () <NSTextFieldDelegate>
+
+@property (weak) IBOutlet NSTextField *messageTextField;
 
 @end
 
 @implementation SALMainViewController
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Initialization code here.
-    }
-    return self;
+
+- (void)loadView {
+    [super loadView];
+
+    self.messageTextField.delegate = self;
 }
+
+- (void)controlTextDidChange:(NSNotification *)notification {
+    NSLog(@"Control text %@", self.messageTextField.stringValue);
+}
+
 
 @end
