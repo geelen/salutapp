@@ -7,10 +7,12 @@
 //
 
 #import "SALMainViewController.h"
+#import <WebKit/WebKit.h>
 
 @interface SALMainViewController () <NSTextFieldDelegate>
 
 @property (weak) IBOutlet NSTextField *messageTextField;
+@property (weak) IBOutlet WebView *contentWebView;
 
 @end
 
@@ -19,8 +21,10 @@
 
 - (void)loadView {
     [super loadView];
-
-    self.messageTextField.delegate = self;
+    
+    [self.messageTextField.rac_textSignal subscribeNext:^(NSString *newName) {
+        NSLog(@"%@", newName);
+    }];
 }
 
 - (void)controlTextDidChange:(NSNotification *)notification {
