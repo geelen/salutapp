@@ -10,14 +10,14 @@
 
 SpecBegin(SALRoomModel)
 
+__block SALRoomModel *model;
+
+beforeEach(^{
+    model = [[SALRoomModel alloc] init];
+    expect(model).toNot.beNil();
+});
+
 describe(@"when initialised", ^{
-    __block SALRoomModel *model;
-    
-    beforeEach(^{
-        model = [[SALRoomModel alloc] init];
-        expect(model).toNot.beNil();
-    });
-   
     it(@"should do a 💩", ^{
         expect(model.members).to.equal(@[@"LOL"]);
     });
@@ -30,10 +30,14 @@ describe(@"when initialised", ^{
     
 });
 
-/* 
- 
- 
- 
- */
+describe(@"when I join the room", ^{
+    beforeEach(^{
+        [model iJoinedRoom];
+    });
+    
+    it(@"should wipe the members list", ^{
+        expect(model.members).to.equal(@[]);
+    });
+});
 
 SpecEnd

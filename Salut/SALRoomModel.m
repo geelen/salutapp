@@ -27,4 +27,34 @@
     self.members = [self.members arrayByAddingObject:member];
 }
 
+- (void)iJoinedRoom {
+    self.members = @[];
+}
+
+// I joined room
+//
+// Broadcast that I joined
+
+// Friend is already here
+//
+// Add them to my list
+// Ask them for some history
+
+// Friend joined room
+//
+// Add them to my list
+// Tell them that I am here already
+
+// Friend left room
+//
+// Remove them from my list
+
+// I sent message
+//
+// Broadcast it & some history
+
+// I received message
+//
+// Add it to my message state
+
 @end
