@@ -11,9 +11,9 @@
 @interface SALRoomModel : NSObject
 
 @property (nonatomic, strong) NSArray *members;
+@property (nonatomic, strong) NSString *myName;
 
 - (id)initWithNetworkModel:(SALNetworkModel *) network;
-- (void)addMember:(NSString *) member;
-- (void)iJoinedRoom;
+- (void)iJoinedRoom:(NSString *) myName;
 
 @end

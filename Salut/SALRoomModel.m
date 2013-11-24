@@ -20,20 +20,18 @@
 - (id)initWithNetworkModel:(SALNetworkModel *) network {
 	self = [super init];
     if (self == nil) return nil;
-    
+
+    self.myName = @"LOLOL";
     self.members = @[@"LOL"];
     self.network = network;
     
     return self;
 }
 
-- (void)addMember:(NSString *) member {
-    self.members = [self.members arrayByAddingObject:member];
-}
-
-- (void)iJoinedRoom {
+- (void)iJoinedRoom:(NSString *) myName {
+    self.myName = myName;
     self.members = @[];
-    [self.network broadcastJoin:@"MY NAME IS WHAT"];
+    [self.network broadcastJoin:self.myName];
 }
 
 // I joined room

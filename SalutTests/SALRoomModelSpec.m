@@ -21,28 +21,23 @@ beforeEach(^{
 });
 
 describe(@"when initialised", ^{
-    it(@"should do a 💩", ^{
+    it(@"should have some nonsense state", ^{
         expect(model.members).to.equal(@[@"LOL"]);
+        expect(model.myName).to.equal(@"LOLOL");
     });
-    
-    it(@"should add members", ^{
-        [model addMember:@"LOLWAT"];
-        
-        expect(model.members).to.equal(@[@"LOL", @"LOLWAT"]);
-    });
-    
+
 });
 
 describe(@"when I join the room", ^{
     it(@"should wipe the members list", ^{
-        [model iJoinedRoom];
+        [model iJoinedRoom:@"G-DOG"];
         expect(model.members).to.equal(@[]);
     });
     
     it(@"should announce that I have arrived", ^{
-        [[networkMock expect] broadcastJoin:[OCMArg any]];
+        [[networkMock expect] broadcastJoin:@"G-DOG"];
         
-        [model iJoinedRoom];
+        [model iJoinedRoom:@"G-DOG"];
         [networkMock verify];
     });
 });
