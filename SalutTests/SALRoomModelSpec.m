@@ -7,13 +7,16 @@
 //
 
 #import "SALRoomModel.h"
+#import "SALNetworkModel.h"
 
 SpecBegin(SALRoomModel)
 
 __block SALRoomModel *model;
+__block id networkMock;
 
 beforeEach(^{
-    model = [[SALRoomModel alloc] init];
+    networkMock = [OCMockObject niceMockForClass:[SALNetworkModel class]];
+    model = [[SALRoomModel alloc] initWithNetworkModel:networkMock];
     expect(model).toNot.beNil();
 });
 
@@ -31,12 +34,16 @@ describe(@"when initialised", ^{
 });
 
 describe(@"when I join the room", ^{
-    beforeEach(^{
+    it(@"should wipe the members list", ^{
         [model iJoinedRoom];
+        expect(model.members).to.equal(@[]);
     });
     
-    it(@"should wipe the members list", ^{
-        expect(model.members).to.equal(@[]);
+    it(@"should announce that I have arrived", ^{
+        [[networkMock expect] broadcastJoin:[OCMArg any]];
+        
+        [model iJoinedRoom];
+        [networkMock verify];
     });
 });
 

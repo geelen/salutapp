@@ -6,12 +6,13 @@
 //  Copyright (c) 2013 Glen Maddern. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+@class SALNetworkModel;
 
 @interface SALRoomModel : NSObject
 
 @property (nonatomic, strong) NSArray *members;
 
+- (id)initWithNetworkModel:(SALNetworkModel *) network;
 - (void)addMember:(NSString *) member;
 - (void)iJoinedRoom;
 

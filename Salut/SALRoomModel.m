@@ -7,18 +7,22 @@
 //
 
 #import "SALRoomModel.h"
+#import "SALNetworkModel.h"
 
 @interface SALRoomModel ()
+
+@property (nonatomic, strong) SALNetworkModel *network;
 
 @end
 
 @implementation SALRoomModel
 
-- (id)init {
+- (id)initWithNetworkModel:(SALNetworkModel *) network {
 	self = [super init];
     if (self == nil) return nil;
     
     self.members = @[@"LOL"];
+    self.network = network;
     
     return self;
 }
@@ -29,6 +33,7 @@
 
 - (void)iJoinedRoom {
     self.members = @[];
+    [self.network broadcastJoin:@"MY NAME IS WHAT"];
 }
 
 // I joined room

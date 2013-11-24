@@ -11,3 +11,4 @@
 #define EXP_SHORTHAND
 #import "Specta.h"
 #import "Expecta.h"
+#import "OCMock/OCMock.h"
